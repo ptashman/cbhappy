@@ -1,0 +1,28 @@
+// Place all the styles related to the moods controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#happy {
+  height: 400px;
+  width: 400px;
+  margin: 50px;
+}
+
+#sad {
+  height: 400px;
+  width: 400px;
+  margin: 50px;
+}
+
+.margin-auto {
+  margin: auto;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.stats {
+  font-size: 100pt;
+  padding:75px;
+}

@@ -1,0 +1,19 @@
+<h1 class="center-text">Today's Mood Statistics</h1>
+<table class="margin-auto">
+  <tr>
+    <td class="stats">
+      <img src="/assets/happy.png", width="250px", height="250px">
+    </td>
+    <td class="stats">
+      <img src="/assets/sad.png", width="250px", height="250px">
+    </td>
+  </tr>
+  <tr>
+    <td class="stats center-text">
+      <%= @moods.happiness %>
+    </td>
+    <td class="stats center-text">
+      <%= @moods.sadness %>
+    </td>
+  </tr>
+</table>
