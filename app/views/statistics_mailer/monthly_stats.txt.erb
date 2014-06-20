@@ -1,1 +1,4 @@
-text hello
+<% (1..30).each do |n| %>
+Happiness <%= n %> days ago: <%= Mood.where('created_at > ?', n.days.ago).where('created_at < ?', (n-1).days.ago).happiness %>
+Sadness <%= n %> days ago: <%= Mood.where('created_at > ?', n.days.ago).where('created_at < ?', (n-1).days.ago).sadness %>
+<% end %>

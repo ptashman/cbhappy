@@ -1,2 +1,4 @@
-<p>Happiness in the past 30 days: <%= Mood.where('created_at > ?', 30.days.ago).happiness %></p>
-<p>Sadness in the past 30 days: <%= Mood.where('created_at > ?', 30.days.ago).sadness %></p>
+<% (1..30).each do |n| %>
+<p>Happiness <%= n %> days ago: <%= Mood.where('created_at > ?', n.days.ago).where('created_at < ?', (n-1).days.ago).happiness %></p>
+<p>Sadness <%= n %> days ago: <%= Mood.where('created_at > ?', n.days.ago).where('created_at < ?', (n-1).days.ago).sadness %></p>
+<% end %>
