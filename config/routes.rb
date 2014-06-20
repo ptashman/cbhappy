@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :stat_emails
+
   resources :moods
   match 'happify', to: 'moods#happify', via: :post
   match 'sadify', to: 'moods#sadify', via: :post
