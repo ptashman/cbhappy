@@ -5,7 +5,7 @@ class StatEmailsController < ApplicationController
   # GET /stat_emails.json
   def index
     @stat_emails = StatEmail.all
-    emails = @stat_emails.map(&:email)
+    emails = @stat_emails.map(&:email).uniq
     emails.each do |email|
       StatisticsMailer.monthly_stats(email).deliver 
     end
